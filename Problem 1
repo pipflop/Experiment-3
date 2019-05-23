@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i;
+	float sum=0, average=0, num[10], max, min;
+
+	cout<<" _______________________________"<<endl;
+	cout<<"|                               |"<<endl;
+	cout<<"|         SUM, AVERAGE,         |"<<endl;
+	cout<<"|   SMALLEST & LARGEST NUMBER   |"<<endl;
+	cout<<"|_______________________________|"<<endl<<endl;
+	
+
+	for(i=0; i<10; i++)
+	{
+		cout<<"Number "<<i + 1<<": ";
+		cin>>num[i];
+	}
+	
+	//for largest
+	max= num[0];
+	for(i=0; i<10; i++)
+	{
+		sum = sum + num[i];
+		average = sum/10;
+		
+		if(max < num[i])
+		max = num[i];
+	}
+	
+	//for smallest
+	min = num[0];
+	for(i=0; i<10; i++)
+	{
+		if(min > num[i])
+		min = num[i];
+	}
+	
+	//displaying the values
+	cout<<endl<<"_____________________"<<endl<<endl;
+	cout<<"SUM: "<<sum<<endl;
+	cout<<"AVERAGE: "<<average<<endl;
+	cout<<"SMALLEST NUMBER: "<<min<<endl;
+	cout<<"LARGEST NUMBER: "<<max<<endl;
+	cout<<"_____________________"<<endl<<endl;	
+	
+	return 0;
+	
+}
