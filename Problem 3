@@ -1,0 +1,52 @@
+#include<iostream>
+#include<cstring>//for strlen
+using namespace std;
+int main()
+{
+	char message[1000];
+	int i, j, temp;
+	
+	char name[20];
+	
+	cout<<" _______________________________"<<endl;
+	cout<<"|                               |"<<endl;
+	cout<<"|       REVERSE & LENGTH        |"<<endl;
+	cout<<"|         OF AN ARRAY           |"<<endl;
+	cout<<"|_______________________________|"<<endl<<endl;
+	
+	
+	cout<<"What is the message for today? "<<endl<<"----->  ";
+	cin.getline(message, 1000);
+	
+	cout<<endl<<"__________________________________"<<endl;
+	
+	cout<<endl<< "ARRAY SIZE: "<<strlen(message);
+	cout<<endl<<"ARRAY CONTAINS: ";
+
+	for(i=0; message[i]!='\0';i++)
+	{
+		cout<<message[i];
+	}
+	
+	j = i -1;
+	i=0;
+	while(i<j)
+	{
+		temp=message[i];
+		message[i] = message[j];
+		message[j] = temp;
+		i++;
+		j--;
+	}
+	
+	cout<<endl<<"REVERSE FORM: ";
+	for(i=0; i<message[i]!='\0'; i++)
+	{
+		cout<<message[i];
+	}
+	
+	cout<<endl<<"__________________________________";
+
+	
+	return 0;
+}
