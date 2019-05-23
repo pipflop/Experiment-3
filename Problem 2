@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	char province[30]= "ABC";
+	int Week = 6, prov = 3;
+	int i,j; //counter
+	double temp[10][10];
+	
+	cout<<" _____________________________"<<endl;
+	cout<<"|                             |"<<endl;
+	cout<<"|       PROVINCE A,B,C,       |"<<endl;
+	cout<<"|    AND THEIR TEMPERATURE    |"<<endl;
+	cout<<"|_____________________________|"<<endl;
+	
+	for(i=0; i<prov;i++)//for province
+	{
+		cout<<endl;
+		for(j=0; j<=Week; j++)//for day
+		{
+			cout<<"Province "<<province[i]<<", Day "<<j+1<<": ";
+			cin>>temp[i][j];
+		}
+		
+	}
+
+	cout<<endl<<"\t___________________________"<<endl;
+	cout<<"\t*** DISPLAYING IT ALL... ***"<<endl;
+	
+	for(i=0; i<prov;i++)//for displaying
+	{
+		cout<<endl;
+		for(j=0; j<=Week; j++)
+		{
+			cout<<"\t   Province "<<province[i]<<", Day "<<j+1<<": "<<temp[i][j]<<endl;
+		}
+	}	
+	
+	cout<<"\t___________________________"<<endl;
+
+	return 0;
+}
